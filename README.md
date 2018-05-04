@@ -22,8 +22,23 @@ Whilst choosing to develop a custom UI for allowing a date value to be selected 
 
 ## Solution
 
-Create 3 dropdown lists for day, month and year within a container element that is only accessible to screen reader users and hidden to other users.
+Create a dropdown lists for day, month and year within a container element that is only accessible to screen reader users and hidden to other users.
 
+### CSS
+```css
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	border: 0;
+}
+```
+
+### HTML
 ```html
 <div class="sr-only">
 	<!-- Day -->
