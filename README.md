@@ -24,7 +24,12 @@ Whilst choosing to develop a custom UI for allowing a date value to be selected 
 
 Create a dropdown lists for day, month and year within a container element that is only accessible to screen reader users and hidden to other users.
 
+## Code Examples
+
+The code examples below illustrate how the solution can be implemented.
+
 ### CSS
+Create a style class that can be applied to elements that are accessible for screen reader users, yet hidden to other users.
 ```css
 .sr-only {
 	position: absolute;
@@ -39,6 +44,7 @@ Create a dropdown lists for day, month and year within a container element that 
 ```
 
 ### HTML
+Create a dropdown list for day, month and year.
 ```html
 <div class="sr-only">
 	<!-- Day -->
@@ -59,12 +65,11 @@ Create a dropdown lists for day, month and year within a container element that 
 </div>
 ```
 
-## Code Examples
-
+### JavaScript
 ```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
+const myDateInput = document.getElementById('myDateInput');
 ```
+
 
 ## ARIA
 
