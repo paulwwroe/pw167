@@ -46,22 +46,26 @@ Create a style class that can be applied to elements that are accessible for scr
 ### HTML
 Create a dropdown list for day, month and year.
 ```html
-<div class="sr-only">
-	<!-- Day -->
-	<select id="sr-day">
+<!-- Primary input field -->
+<input type="text" name="myDate" id="myDateInput" aria-hidden="true" />
+
+<!-- Container element for day, month, year -->
+<div class="sr-only"> 
+	<select id="sr-day" onchange="update()">
 		<option value="01">01</option>
-		<!-- More options -->
+		<option value="02">02</option>
+		<option value="03">03</option>
 	</select>
-	<!-- Month -->
-	<select id="sr-month">
-		<option value="04">04</option>
-		<!-- More options -->
+	<select id="sr-month" onchange="update()">
+		<option value="01">01</option>
+		<option value="02">02</option>
+		<option value="03">03</option>
 	</select>
-	<!-- Year -->
-	<select id="sr-year">
+	<select id="sr-year" onchange="update()">
 		<option value="2018">2018</option>
-		<!-- More options -->
-	</select>
+		<option value="2019">2019</option>
+		<option value="2020">2020</option>
+	</select> 
 </div>
 ```
 
