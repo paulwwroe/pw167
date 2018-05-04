@@ -36,9 +36,12 @@ Whilst choosing to develop a custom UI for allowing a date value to be selected 
 
 ## Code Examples
 
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
 
 ## Testing
-
 
 ## Solution
 
