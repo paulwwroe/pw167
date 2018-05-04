@@ -1,4 +1,4 @@
-![date picker ui diagram](https://github.com/paulwwroe/pw167/images/diagram.png "Date Picker Ui")
+![date picker ui diagram](https://github.com/paulwwroe/pw167/blob/master/images/diagram.png "Date Picker Ui")
 
 # Date Picker UI
 
