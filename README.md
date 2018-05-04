@@ -22,6 +22,28 @@ Whilst choosing to develop a custom UI for allowing a date value to be selected 
 
 ## Solution
 
+Create 3 dropdown lists for day, month and year within a container element that is only accessible to screen reader users and hidden to other users.
+
+```html
+<div class="sr-only">
+	<!-- Day -->
+	<select id="sr-day">
+		<option value="01">01</option>
+		<!-- More options -->
+	</select>
+	<!-- Month -->
+	<select id="sr-month">
+		<option value="04">04</option>
+		<!-- More options -->
+	</select>
+	<!-- Year -->
+	<select id="sr-year">
+		<option value="2018">2018</option>
+		<!-- More options -->
+	</select>
+</div>
+```
+
 ## Code Examples
 
 ```javascript
