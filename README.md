@@ -20,19 +20,7 @@ Whilst choosing to develop a custom UI for allowing a date value to be selected 
 
 ## Problem
 
-
-## Announcements
-
-
-## ARIA
-
-| Attribute		| Details		|
-| ------------- |:-------------:|
-| aria-hidden	|				|
-
-
-## Acceptance Criteria
-
+## Solution
 
 ## Code Examples
 
@@ -41,7 +29,15 @@ var s = "JavaScript syntax highlighting";
 alert(s);
 ```
 
-## Testing
+## ARIA
 
-## Solution
+| Attribute		| Details		|
+| ------------- |:-------------:|
+| aria-hidden	|				|
+
+## Announcements
+
+## Acceptance Criteria
+
+## Testing
 
