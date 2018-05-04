@@ -67,7 +67,18 @@ Create a dropdown list for day, month and year.
 
 ### JavaScript
 ```javascript
+//	Primary input field
 const myDateInput = document.getElementById('myDateInput');
+
+//	Day, Month and Year select elements
+const srDay = document.getElementById('sr-day');
+const srMonth = document.getElementById('sr-month');
+const srYear = document.getElementById('sr-year');
+
+//	 Set value of primary input to concatenated value
+const update = () => {
+  myDateInput.value = srDay.value + '/' + srMonth.value + '/' + srYear.value;
+}
 ```
 
 
