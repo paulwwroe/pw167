@@ -2,33 +2,21 @@
 
 ![date picker ui diagram](https://github.com/paulwwroe/pw167/blob/master/images/diagram.png "Date Picker Ui")
 
-## Contents
-1. Context
-2. Problem
-3. Announcements
-4. ARIA 
-5. Acceptance Criteria
-6. Code Examples
-7. Testing
-8. Solution
-
-
 ## Context
 
-Whilst choosing to develop a custom UI for allowing a date value to be selected within a web page can guarantee cross-browser support and consistent behaviour, it can also result in poor accessibility. A screen reader user may find it difficult, or in some cases impossible to select and set a date value using a custom developped date picker UI. This design pattern presents a solution for developing a custom date picker UI, that when implemented optimizes accessibility for screen reader users.git
-
+Whilst choosing to develop a custom date picker UI component can maximise cross-browser support and ensure consistent behaviour, it can also result in poor accessibility, meaning that screen reader users may find it difficult, or in some cases impossible to select and set a date. This design pattern presents an accessible solution that can be implemented alongside a custom built date picker UI component.
 
 ## Problem
 
 ## Solution
 
-Create a dropdown lists for day, month and year within a container element that is only accessible to screen reader users and hidden to other users.
+Include 3 additional dropdown lists for day, month and year within a container element that is only accessible to screen reader users and hidden to others. Programmatically set the value of the primary input field when either of the 3 additional dropdown lists are changed. Apply ARIA roles to the primary input field so that a screen reader user is only able to control the value of the day, month and year dropdown list controls.
 
 ## Code Examples
 
-The code examples below illustrate how the solution can be implemented.
+The code examples below demonstrate how the solution given could be implemented using HTML, JavaScript and CSS.
 
-### CSS
+#### CSS
 Create a style class that can be applied to elements that are accessible for screen reader users, yet hidden to other users.
 ```css
 .sr-only {
@@ -43,38 +31,44 @@ Create a style class that can be applied to elements that are accessible for scr
 }
 ```
 
-### HTML
-Create a dropdown list for day, month and year.
+#### HTML
+Create three additional dropdown lists for day, month and year.
 ```html
-<!-- Primary input field -->
-<input type="text" name="myDate" id="myDateInput" aria-hidden="true" />
+<div aria-hidden="true">
+	<!-- Primary input field -->
+	<input type="text" name="myDateInput" id="myDateInput" />
+	<button>Select Date</buton>
+</div>
 
-<!-- Container element for day, month, year -->
+<!-- Container element for day, month and year input fields -->
 <div class="sr-only"> 
 	<select id="sr-day" onchange="update()">
 		<option value="01">01</option>
 		<option value="02">02</option>
 		<option value="03">03</option>
+		<!-- ... -->
 	</select>
 	<select id="sr-month" onchange="update()">
 		<option value="01">01</option>
 		<option value="02">02</option>
 		<option value="03">03</option>
+		<!-- ... -->
 	</select>
 	<select id="sr-year" onchange="update()">
 		<option value="2018">2018</option>
 		<option value="2019">2019</option>
 		<option value="2020">2020</option>
+		<!-- ... -->
 	</select> 
 </div>
 ```
 
-### JavaScript
+#### JavaScript
 ```javascript
 //	Primary input field
 const myDateInput = document.getElementById('myDateInput');
 
-//	Day, Month and Year select elements
+//	Day, month and year select elements
 const srDay = document.getElementById('sr-day');
 const srMonth = document.getElementById('sr-month');
 const srYear = document.getElementById('sr-year');
@@ -85,12 +79,11 @@ const update = () => {
 }
 ```
 
-
 ## ARIA
 
-| Attribute		| Details		|
-| ------------- |:-------------:|
-| aria-hidden	|				|
+| Attribute		| Value 		| Details 		|
+| ------------- |:-------------:|:-------------:|
+| aria-hidden	| true			| Hide the primary input field to screen reader users	|
 
 ## Announcements
 
