@@ -42,18 +42,21 @@ Create three additional dropdown lists for day, month and year.
 
 <!-- Container element for day, month and year input fields -->
 <div class="sr-only"> 
+	<label>select a day</label>
 	<select id="sr-day" onchange="update()">
 		<option value="01">01</option>
 		<option value="02">02</option>
 		<option value="03">03</option>
 		<!-- ... -->
 	</select>
+	<label>select a month</label>
 	<select id="sr-month" onchange="update()">
 		<option value="01">01</option>
 		<option value="02">02</option>
 		<option value="03">03</option>
 		<!-- ... -->
 	</select>
+	<label>select a year</select>
 	<select id="sr-year" onchange="update()">
 		<option value="2018">2018</option>
 		<option value="2019">2019</option>
@@ -64,6 +67,8 @@ Create three additional dropdown lists for day, month and year.
 ```
 
 #### JavaScript
+Create a function that updates the value of the primary input field using the concatenated values of the additional input fields. The function is triggered when the 'onchange' event listenner that is attached to each of the additional input elements occurs.
+
 ```javascript
 //	Primary input field
 const myDateInput = document.getElementById('myDateInput');
@@ -75,7 +80,11 @@ const srYear = document.getElementById('sr-year');
 
 //	 Set value of primary input to concatenated value
 const update = () => {
-  myDateInput.value = srDay.value + '/' + srMonth.value + '/' + srYear.value;
+	
+	//	... add validation e.g. protect against invalid dates
+
+	myDateInput.value = srDay.value + '/' + srMonth.value + '/' + srYear.value;
+
 }
 ```
 
