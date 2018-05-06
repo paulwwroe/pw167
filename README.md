@@ -1,4 +1,4 @@
-# Date Picker UI
+# Accessible Date Picker UI
 
 ![date picker ui diagram](https://github.com/paulwwroe/pw167/blob/master/images/diagram.png "Date Picker Ui")
 
