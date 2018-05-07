@@ -96,7 +96,8 @@ const update = () => {
 
 ## Announcements
 
-## Features
+## Feature
+The following features act as acceptance criteria that must be met in order to successfully implement the solution given. Each of these features can be in [features](https://github.com/paulwwroe/pw167/tree/master/features).
 ```
 Feature: Update date value
 	
@@ -113,5 +114,20 @@ Scenario: I am a screen reader user wanting to set a date
 	
 	Then the value of the date field is updated
 		And I should hear the updated date
+
+Feature: Apply ARIA role to hidedate picker UI
+	
+	A screen reader must not be able to interact with
+	the original date picker UI. An ARIA attribute is
+	applied to the container element to hide it.
+
+Scenario: I am a screen reader user wanting to set a date
+	
+	Given I set focus to the date field	
+	
+	When I set a date
+
+	Then I should only be able to set day, month, or year
+		And shouldn't be ableto focus to the date picker UI
 ```
 
