@@ -94,7 +94,7 @@ const update = () => {
 
 ## Announcements
 
-![dropdown list](https://github.com/paulwwroe/pw167/blob/master/images/diagram.png "dropdown list")
+![dropdown list](https://github.com/paulwwroe/pw167/blob/master/images/announcement.xml "dropdown list")
 
 The table below outlines how each of the elements within the solution should be announced. 
 
