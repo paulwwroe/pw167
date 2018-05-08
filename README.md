@@ -94,11 +94,15 @@ const update = () => {
 
 ## Announcements
 
-The following table outlines how each of the elements within the solution should be announced. 
+![dropdown list](https://github.com/paulwwroe/pw167/blob/master/images/diagram.png "dropdown list")
 
-| Identifier	| Announce 		|
-| ------------- |:-------------:|
-| 1 			| ''			|
+The table below outlines how each of the elements within the solution should be announced. 
+
+| Identifier	| Announces 				|
+| ------------- |:-------------------------:|
+| 1 			| 'select a day (DD)'		|
+| 2 			| 'select a month (MM)'		|
+| 3 			| 'select a year (YYYY)'	|
 
 ## Feature
 
