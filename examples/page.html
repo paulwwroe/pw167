@@ -1,0 +1,30 @@
+<div aria-hidden="true">
+	<!-- Primary input field -->
+	<input type="text" name="myDateInput" id="myDateInput" />
+	<button>Select Date</buton>
+</div>
+
+<!-- Container element for day, month and year input fields -->
+<div class="sr-only"> 
+	<label>select a day</label>
+	<select id="sr-day" onchange="update()">
+		<option value="01">01</option>
+		<option value="02">02</option>
+		<option value="03">03</option>
+		<!-- ... -->
+	</select>
+	<label>select a month</label>
+	<select id="sr-month" onchange="update()">
+		<option value="01">01</option>
+		<option value="02">02</option>
+		<option value="03">03</option>
+		<!-- ... -->
+	</select>
+	<label>select a year</select>
+	<select id="sr-year" onchange="update()">
+		<option value="2018">2018</option>
+		<option value="2019">2019</option>
+		<option value="2020">2020</option>
+		<!-- ... -->
+	</select> 
+</div>

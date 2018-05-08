@@ -2,11 +2,9 @@
 
 ![date picker ui diagram](https://github.com/paulwwroe/pw167/blob/master/images/diagram.png "Date Picker Ui")
 
-## Context
+## Problem
 
 Whilst choosing to develop a custom date picker UI component can maximise cross-browser support and ensure consistent behaviour, it can also result in poor accessibility, meaning that screen reader users may find it difficult, or in some cases impossible to select and set a date. This design pattern presents an accessible solution that can be implemented alongside a custom built date picker UI component.
-
-## Problem
 
 ## Solution
 
@@ -96,14 +94,22 @@ const update = () => {
 
 ## Announcements
 
+The following table outlines how each of the elements within the solution should be announced. 
+
+| Identifier	| Announce 		|
+| ------------- |:-------------:|
+| 1 			| ''			|
+
 ## Feature
+
 The following features act as acceptance criteria that must be met in order to successfully implement the solution given. Each of these features can be in [features](https://github.com/paulwwroe/pw167/tree/master/features).
+
 ```
 Feature: Update date value
 	
 	The date value of the primary input field should be
 	updated when a screen reader user changes the value
-	of the day, month or year optins. 
+	of the day, month or year options. 
 
 Scenario: I am a screen reader user wanting to set a date
 	
@@ -130,4 +136,3 @@ Scenario: I am a screen reader user wanting to set a date
 	Then I should only be able to set day, month, or year
 		And shouldn't be ableto focus to the date picker UI
 ```
-
